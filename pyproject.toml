@@ -41,7 +41,7 @@ documentation = "https://yamllint.readthedocs.io"
 
 [build-system]
 build-backend = "setuptools.build_meta"
-requires = ["setuptools>=61"]
+requires = ["setuptools>=64", "setuptools-scm[toml]>=8"]
 
 [tool.setuptools]
 packages = ["yamllint", "yamllint.conf", "yamllint.rules"]
@@ -49,5 +49,5 @@ packages = ["yamllint", "yamllint.conf", "yamllint.rules"]
 [tool.setuptools.package-data]
 yamllint = ["conf/*.yaml"]
 
-[tool.setuptools.dynamic]
-version = {attr = "yamllint.__version__"}
+[tool.setuptools-scm]
+write_to = "yamllint/_version.py"
